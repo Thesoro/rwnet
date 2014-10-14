@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.main',
   'myApp.contact',
-  'myApp.version'
+  'myApp.version',
+  'myApp.code'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/main'});
