@@ -1,3 +1,11 @@
+  <ul class="menu sub">
+    <li><a href="#/main">satire channel</a></li>
+    <li><a href="#/contact">jobhunters</a></li>
+    <li><a href="#/code">other youtube</a></li>
+  </ul>
+
+
+
 Rob writes words. He got a degree in Drama from the University of Washington in 2009. He writes comedy and also does improv with Jet City Improv and Unexpected Productions. Improv shows he's been in include:
 <ul>
   <li>Final Fantasy: The Improvised Adventures (UP, 2012, 2014)
@@ -6,3 +14,11 @@ Rob writes words. He got a degree in Drama from the University of Washington in 
 </ul>
 
 He also writes sketch comedy and has done so for the youtube channel <a href="http://www.youtube.com/user/Satire">Satire</a> and the live comedy group The Pilot Episode.
+
+<ul class="projects">
+        <li ng-repeat="project in projects">
+          {{project.name}}
+<iframe width="560" height="315" src="{{project.youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
+          <p>{{project.summary}}</p>
+        </li>
+      </ul>

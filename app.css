@@ -29,6 +29,10 @@
   padding: 0;
 }
 
+.menu.sub {
+  border-bottom: 0em;
+}
+
 a {
   color: #008;
 }

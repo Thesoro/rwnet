@@ -9,6 +9,8 @@ angular.module('myApp.words', ['ngRoute'])
   });
 }])
 
-.controller('wordsCtrl', [function() {
-
+.controller('wordsCtrl', [function($scope, $http) {
+  $http.get('projects/projects.json').success(function(data) {
+    $scope.projects = data
+  });
 }]);
