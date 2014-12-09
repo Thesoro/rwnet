@@ -7,9 +7,9 @@ angular.module('myApp.words', ['ngRoute'])
     templateUrl: 'words/words.html',
     controller: 'wordsCtrl'
   });
-}])
+}]);
 
-.controller('wordsCtrl', [function($scope, $http) {
+myApp.words.controller('wordsCtrl', [function($scope, $http) {
   $http.get('projects/projects.json').success(function(data) {
     $scope.projects = data
   });
