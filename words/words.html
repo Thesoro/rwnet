@@ -10,10 +10,10 @@ He also writes sketch comedy and has done so for the youtube channel <a href="ht
 <br><br>
 He has written for games company Wizards of the Coast and the web series Job Hunters.
 
-<ul class="projects">
+<ul class="projlist">
         <li ng-repeat="project in projects">
-          {{project.name}}
-<iframe width="560" height="315" src="{{project.youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
+          {{project.name}}<br>
+<iframe width="560" height="315" ng-src="{{project.youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
           <p>{{project.summary}}</p>
         </li>
       </ul>
