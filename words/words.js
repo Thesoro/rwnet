@@ -12,13 +12,12 @@ angular.module('myApp.words', ['ngRoute'])
 .controller('wordsCtrl', function($scope, $http, $sce) {
   $http.get('projects/projects.json').success(function(data) {
     $scope.projects = data;
-    var x = $scope.projects[0].youtubeUrl;
-    $scope.projects[0].youtubeUrl = $sce.trustAsResourceUrl(x);
+
+//Tells the $sce module that the URLs we're passing are OK and not part of an XSS attack
+    var x;
+    for (x in $scope.projects) {
+      var y = $scope.projects[x].youtubeUrl;
+      $scope.projects[x].youtubeUrl = $sce.trustAsResourceUrl(y);
+    }
   });
-
-
-
-//  for (var x in $scope.projects) {
-//    x[youtubeUrl] = $sce.trustAsResourceUrl(x[youtubeUrl]);
-//  }
 });

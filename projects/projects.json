@@ -4,4 +4,16 @@
         "name": "Nasa And We Know It",
         "summary": "A music video inspired by the Mars Curiosity Rover landing and LMFAO."
     }
+,
+    {
+        "youtubeUrl": "https://www.youtube.com/embed/veXJWD0L1P4?autoplay=false",
+        "name": "The Day The Lolcats Died",
+        "summary": "A musical parody of Don McLean in protest of the SOPA/PIPA Bill."
+    }
+,
+    {
+        "youtubeUrl": "https://www.youtube.com/embed/hxPlHW0J2sU?autoplay=false",
+        "name": "March Madness Explained in Star Wars",
+        "summary": "Self-explanatory"
+    }
 ]

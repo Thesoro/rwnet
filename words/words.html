@@ -12,8 +12,12 @@ He has written for games company Wizards of the Coast and the web series Job Hun
 
 <ul class="projlist">
         <li ng-repeat="project in projects">
-          {{project.name}}<br>
+          <div ng-model='proj'>{{project.name}}</div><br>
 <iframe width="560" height="315" ng-src="{{project.youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
-          <p>{{project.summary}}</p>
+          <br><p>{{project.summary}}</p>
+          <br>
         </li>
       </ul>
+
+
+<div>
