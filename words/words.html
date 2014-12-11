@@ -9,15 +9,14 @@ Rob writes words. He got a degree in Drama from the University of Washington in 
 He also writes sketch comedy and has done so for the youtube channel <a href="http://www.youtube.com/user/Satire">Satire</a> and the live comedy group The Pilot Episode.
 <br><br>
 He has written for games company Wizards of the Coast and the web series Job Hunters.
-
-<ul class="projlist">
-        <li ng-repeat="project in projects">
-          <div ng-model='proj'>{{project.name}}</div><br>
+<br><br>
+Here are youtube embeds of some of Rob's projects.
+<div><select ng-model='proj' ng-init="proj='Select a Project'">
+  <option>Select a Project</option>
+  <option ng-repeat="project in projects" value="{{project.name}}">{{project.name}}</option>
+</select></div><br>
+        <div ng-repeat = "project in projects" ng-show="([project] | filter:proj).length > 0">
 <iframe width="560" height="315" ng-src="{{project.youtubeUrl}}" frameborder="0" allowfullscreen></iframe>
           <br><p>{{project.summary}}</p>
           <br>
-        </li>
-      </ul>
-
-
-<div>
+        </div>
