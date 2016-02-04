@@ -10,5 +10,26 @@ angular.module('myApp', [
   'myApp.words'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/main'});
+  $routeProvider
+  .when("/main", {
+    controller: "mainCtrl",
+    title: "main",
+    templateUrl: "/html/main/main.html"
+  })
+  .when("/contact", {
+    controller: "contactCtrl",
+    title: "contact",
+    templateUrl: "/html/contact/contact.html"
+  })
+  .when("/code", {
+    controller: "codeCtrl",
+    title: "code",
+    templateUrl: "/html/code/code.html"
+  })
+  .when("/words", {
+    controller: "wordsCtrl",
+    title: "words",
+    templateUrl: "/html/words/words.html"
+  })
+  .otherwise({redirectTo: '/main'});
 }]);

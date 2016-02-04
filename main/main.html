@@ -1,3 +1,9 @@
-<p>Hello! Welcome to the website for Rob Whitehead.</p>
+<style ng-if="party"> body{color:white}</style><p>Hello! Welcome to the website for Rob Whitehead.</p>
 <p>Rob writes words and also code. He lives in Seattle.</p>
 If you want to hire Rob or contact him for other reasons, please contact him via the contact page.
+<br><br>
+<div><b>Frequently Asked Question: Why is this site the way it is?</b></div>
+A: Rob's taste in website design tends toward the barebones. To browse the deluxe version of the site, please click on this checkbox.
+<input type="checkbox" ng-model="party" ng-init="party=false" />
+  <marquee ng-if="party">partyparty</marquee>
+<style ng-if="party"> body {background-image: url("main/space.jpg")}</style>
