@@ -1,4 +1,4 @@
-Rob writes code. He got a certification in Ruby on Rails development from the University of Washington school of Professional and Continuing Education in 2014. He's worked on a number of projects since then, such as:<br>
+Rob writes code. He got a certification in Ruby on Rails development from the University of Washington school of Professional and Continuing Education in 2014. He's worked on a number of projects since then, including:<br>
 <div class="col-md-12">
 <button ng-click="setCurrent(p)" class="projbtn" ng-class="{active:(currentproject.name == p.name)}" ng-repeat="p in projects">{{p.name}}</select></button>
 </div>
@@ -10,7 +10,8 @@ Rob writes code. He got a certification in Ruby on Rails development from the Un
     </ul><sub><b>Bold</b> indicates technologies used for the selected project</sub>
   </div>
   <div class="col-md-6" ng-if="currentproject.image">
-    <img src="{{currentproject.image}}" class="img-thumbnail" style="max-width: 95%">
+    <img src="/images/{{currentproject.image}}.png" class="img-thumbnail" style="max-width: 95%;max-height:240px;">
+    <br>
     <sub>{{currentproject.name}}</sub>
   </div>
 </div>
