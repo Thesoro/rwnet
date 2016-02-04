@@ -28,7 +28,7 @@ angular.module('myApp.code', ['ngRoute'])
      gallery: false,
     },
     {name:'OpeningLinesBot',
-     description: 'OpeningLinesBot, along with the related GregorSamsaBot, is a project based on parsing and filtering Wiktionary\'s entire 5GB XML size. It includes a parser that picks out words, sorts them by part of speech, and eliminates many of them based on a number of criteria. The filtered dictionaries are used to be substituted in famous opening lines regularly via the Twitter API.',
+     description: 'OpeningLinesBot, along with the related GregorSamsaBot, is a project based on parsing and filtering Wiktionary\'s entire 5GB XML size. It includes a parser that picks out words, sorts them by part of speech, and eliminates many of them based on a number of criteria. The filtered dictionaries are used to be substituted in famous opening lines regularly cronjobbed calls to the Twitter API.',
      image: "samsabot-preview",
      technologies: ['Python', 'Google App Engine', 'Twitter API', "XML"],
      link: "http://twitter.com/OpeningLinesBot",
