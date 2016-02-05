@@ -1,23 +1,53 @@
-Rob writes code. He got a certification in Ruby on Rails development from the University of Washington school of Professional and Continuing Education in 2014. He's worked on a number of projects since then, including:<br>
+Rob writes code. He got a certification in Ruby on Rails development from the University of Washington school of Professional and Continuing Education in 2014. He's worked on a number of projects since then, including:<br><br>
 <div class="col-md-12">
 <button ng-click="setCurrent(p)" class="projbtn" ng-class="{active:(currentproject.name == p.name)}" ng-repeat="p in projects">{{p.name}}</select></button>
 </div>
-<div class="col-md-12">
-  <div class="col-md-6">
-    <ul>
-      <li ng-repeat="item in technologies" ng-style="includesTech(item)">{{item}}
-      </li>
-    </ul><sub><b>Bold</b> indicates technologies used for the selected project</sub>
+<div class="img-thumbnail">
+  <div class="col-md-12">
+    <div class="col-md-6">
+      <ul>
+        <li ng-repeat="item in technologies" ng-style="includesTech(item)">{{item}}
+        </li>
+      </ul><sub><b>Bold</b> indicates technologies used for the selected project</sub>
+    </div>
+    <div class="col-md-6" ng-if="currentproject.image">
+      <img src="/images/{{currentproject.image}}.png" class="img-thumbnail" style="max-width: 95%;max-height:240px;">
+      <br>
+      <sub>{{currentproject.name}}</sub>
+    </div>
   </div>
-  <div class="col-md-6" ng-if="currentproject.image">
-    <img src="/images/{{currentproject.image}}.png" class="img-thumbnail" style="max-width: 95%;max-height:240px;">
-    <br>
-    <sub>{{currentproject.name}}</sub>
+  <br><br>
+  <div class="col-md-10 col-md-offset-1">
+    <h3>{{currentproject.name}}</h3>
+    <div>{{currentproject.description}}</div>
+    <div ng-if="currentproject.link">
+      <a href="{{currentproject.link}}" class="btn btn-link" role="button">Link</a><br>
+      <a ng-if="currentproject.github" href="http://www.github.com/{{currentproject.github}}" class="btn btn-link" role="button">Github</a>
+    </div>
+    <br><br>
+    <div ng-if="currentproject.gallery" class='col-md-12'>
+      <div ng-repeat="gal in currentproject.gallery" class="col-lg-3 col-md-4 col-xs-6 thumb" ng-click="setModal(gal)">
+          <a class="thumbnail" data-toggle="modal" data-target="#galModal">
+              <img class="img-responsive" src="/images/{{gal}}.png" alt="">
+          </a>
+      </div>
+    </div>
   </div>
 </div>
-<br><br>
-<h3>{{currentproject.name}}</h3>
-<div>{{currentproject.description}}</div>
-<div ng-if="currentproject.link">
-  <a href="{{currentproject.link}}" class="btn btn-link" role="button">Link</a>
+
+
+<!-- Modal -->
+<div id="galModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-body">
+        <img class="img-responsive" src="/images/{{currentmodal}}.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+      </div>
+    </div>
+  </div>
 </div>
+
